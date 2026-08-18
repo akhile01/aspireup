@@ -113,10 +113,11 @@ formatted_agent_chain = (
 ).with_types(input_type=AgentInput, output_type=str)
 
 # --- 3. FastAPI App ---
-app = FastAPI(title"india weather and market")
+app = FastAPI(title="india weather and market")
 add_routes(app, formatted_agent_chain, path="/agent")
 
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))
     uvicorn.run(app, host="0.0.0.0", port=port)
+
